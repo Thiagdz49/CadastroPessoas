@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var txtEditnanme: EditText
+    private lateinit var txtEditname: EditText
     private lateinit var addButton: Button
     private lateinit var removeButton: Button
     private lateinit var LVPeople: ListView
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        txtEditnanme = findViewById(R.id.txtnameEdit)
+        txtEditname = findViewById(R.id.txtnameEdit)
         addButton = findViewById(R.id.btnAdd)
         removeButton = findViewById(R.id.removerButton)
         LVPeople = findViewById(R.id.LVpessoas)
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
         addButton.setOnClickListener {
 
-            val nome = txtEditnanme.text.toString().trim()
+            val nome = txtEditname.text.toString().trim()
 
             if (nome.isNotEmpty()) {
                 people.add(nome)
