@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             if (nome.isNotEmpty()) {
                 people.add(nome)
                 adapter.notifyDataSetChanged()
-                txtEditnanme.text.clear()
+                txtEditname.text.clear()
 
                 Toast.makeText(
                     this,
