@@ -1,4 +1,5 @@
 package com.example.cadastropessoas
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Adapter
 import android.widget.Button;
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         addButton = findViewById(R.id.btnAdd)
         removeButton = findViewById(R.id.removerButton)
         LVPeople = findViewById(R.id.LVpessoas)
+
         people.add("Carlos Enrique")
         people.add("Thiago Lopes")
         adapter = ArrayAdapter(
@@ -35,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         LVPeople.choiceMode = ListView.CHOICE_MODE_SINGLE
         LVPeople.adapter = adapter
+
+        LVPeople.setOnClickListener {
+
+        }
 
         LVPeople.setOnItemClickListener { _, _, position, _ ->
             Onpeople = position
@@ -80,5 +86,12 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
         }
+
+
+        fun EditScreen() {
+            val EditSc = Intent(this, EditActivity::class.java)
+            startActivity(EditSc)
+        }
+
     }
 }
